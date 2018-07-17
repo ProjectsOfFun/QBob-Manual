@@ -1,0 +1,82 @@
+$red: #f00
+$blue: #00c
+
+body
+	padding-top: 50px
+	//font-family: 'Cabin', sans-serif
+
+h1, h2
+	color: $blue
+
+a
+	color: $blue
+
+.anchor
+	display: block
+	position: relative
+	top: -90px
+	visibility: hidden
+
+section a
+	text-decoration: underline
+
+img
+	max-width: 100%
+
+kbd
+	color: $blue
+	border: solid 1px $blue
+	background-color: #efefff
+	white-space: nowrap
+	box-shadow: 1px 1px 5px rgba(0,0,0,.3)
+
+.red
+	color: $red
+
+
+.navbar-brand
+	vertical-align: middle
+
+	img
+		margin-right: 10px
+
+.buy-form
+	//text-align: center
+	margin: 1em auto 1.5em auto
+
+@media(max-width: 575px)
+	.display-2
+		font-size: 36px
+
+		.red
+			display: block
+			margin-top: 25px
+			font-size: 64px
+
+
+.content-row
+	padding-top: 1em
+	padding-bottom: 1em
+	border-top: dotted 1px #eee
+
+	h2 + a + &
+		border-top: none
+
+.navbar
+	background-color: #008
+	border-bottom: solid 4px red
+	box-shadow: 2px 2px 8px rgba(0,0,0,.3)
+
+section + section
+	border-top: solid 3px #eee
+	margin-top: 2em
+	padding-top: 2em
+
+.jumbotron
+	background-color: #efefef !important
+
+footer
+	margin-top: 50px
+	border-top: solid 3px $red
+	background-color: #008
+	color: #ccc

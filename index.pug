@@ -1,0 +1,40 @@
+extends ./template.pug
+
+block content
+	section
+		a.anchor#getting
+		include ./_getting_started.pug
+
+	section
+		a.anchor#menu
+		include ./_menu_items.pug
+
+	section
+		a.anchor#characters
+		include ./_characters.pug
+
+	section
+		a.anchor#environment
+		include ./_environment.pug
+
+	section
+		a.anchor#moonrock
+		h2.text-center.display-4.pb-5 MoonRock Software Inc.
+
+		.row 
+			.col-sm-6
+				h3 Contact Information
+
+				p MoonRock Software Inc.<br>1653 Federal Ave E<br>Seattle, WA 98102
+				
+				p
+					| E-mail: moonrock@moonrock.com
+					br
+					a(href="http://www.moonrock.com/") http://www.moonrock.com
+				p Send any questions or problems regarding this software and documentation to moonrock@moonrock.com
+
+			.col-sm-6
+				h3 Legal Information
+				p All text, graphics, and other materials displayed and available in the game and related documentation are copyright &copy; MoonRock Software Inc. All rights reserved.
+				p All product specifications, descriptions, pricing and availability are subject to change without notice. 
+				p MoonRock, the MoonRock logo, QBob, and the QBob Logo are trademarks of MoonRock Software Inc. All other trademarks mentioned belong to their respective owners.

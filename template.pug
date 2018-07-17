@@ -1,0 +1,96 @@
+doctype
+
+mixin contentRow(image, alt, id)
+	a.anchor(id=id)
+	.row.align-items-center.content-row
+		.col-md-3.text-center
+			img(src="images/" + image alt=alt)
+		.col-md-9
+			block
+
+mixin buyButton()
+	form.buy-form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
+		input(type="hidden" name="cmd" value="_xclick")
+		input(type="hidden" name="business" value="moonrock@moonrock.com")
+		input(type="hidden" name="item_name" value="QBob ( for Windows )")
+		input(type="hidden" name="item_number" value="1001")
+		input(type="hidden" name="amount" value="9.95")
+		input(type="hidden" name="cpp_headerback_color" value="ffffff")
+		input(type="hidden" name="image_url" value="https://host50.ipowerweb.com/~moonrock/images/paypal_mlogo.gif")
+		input(type="hidden" name="no_shipping" value="1")
+		input(type="hidden" name="return" value="http://www.moonrock.com/qbob/order_complete.html")
+		input(type="hidden" name="cancel_return" value="http://www.moonrock.com/qbob/order.html")
+		input(type="hidden" name="no_note" value="1")
+		input(type="hidden" name="cs" value="1")
+		input(type="hidden" name="currency_code" value="USD")
+		button.btn.btn-success(type="submit" src="https://www.paypal.com/images/x-click-but23.gif" border="0" name="submit" alt="Purchase Now!") Purchase Now!
+
+html(lang="en")
+	
+	head
+		title QBob Help by MoonRock Software Inc.
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+			
+		style
+			include ./assets/bootstrap.min.css
+		style
+			include ./assets/style.css
+	body#top
+		
+		nav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+			a.red.navbar-brand(href="#top")
+				img(src="images/mrlogo.png" alt="MoonRock Software Inc.")
+				|  QBob Instructions
+			button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+
+			.collapse.navbar-collapse.justify-content-end#navbarNav
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href="#getting") Getting Started
+					li.nav-item
+						a.nav-link(href="#menu") Menu Items
+					li.nav-item
+						a.nav-link(href="#characters") Game Characters
+					li.nav-item
+						a.nav-link(href="#environment") Game Environment
+					//-li.nav-item
+						a.nav-link(href="#ordering") Ordering Information
+					li.nav-item
+						a.nav-link(href="#moonrock") MoonRock Software
+		
+		
+		.jumbotron.pb-5
+			.container
+				h1.display-2.mt-2.pb-4.text-center(style="line-height: 1em")
+					| MoonRock Software presents 
+					strong.red QBob 
+				hr.mt-4
+				p.lead
+					| QBob is an action game, filled with strange space landscapes and bizarre, deadly alien creatures. Prepare to have your nerves jangled and your senses overloaded:  the only sound you can hear is the beating of your own heart... 
+					strong.red until you hear your helmet cracking...
+				//-hr
+		
+		.container
+			
+			//- .row
+			//-   .col-sm-10.offset-sm-1.col-md-8.offset-md-2
+					block content  
+			
+			block content
+
+		footer.pb-4.pt-4
+			.container
+				p.text-center Copyright &copy; MoonRock Software Inc.   
+
+		
+		//-script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+		//-script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+		//-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+
+		script
+			include ./assets/jquery-3.2.1.slim.min.js
+		script
+			include ./assets/bootstrap.min.js
+	
