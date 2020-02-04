@@ -1,4 +1,5 @@
 prepros-6.config
+node_modules
 
 # Numerous always-ignore extensions
 *.diff
