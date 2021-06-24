@@ -4,7 +4,7 @@ This is the offical documentation for the game QBob by MoonRock Software, Inc. T
 
 [View the manual here](https://projectsoffun.github.io/QBob-Manual/)
 
-The final build of the manual is in the /qbob_manual directory. All the other files are dev files and can be ignored unless you want to know how the sausage is made.
+The final build of the manual is in the /docs directory. All the other files are dev files and can be ignored unless you want to know how the sausage is made.
 
 ## Now that you've read the manual, buy the game!
 
